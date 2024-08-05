@@ -10,7 +10,7 @@ import (
 	"github.com/RichardKnop/machinery/v2/config"
 	eagerlock "github.com/RichardKnop/machinery/v2/locks/eager"
 	"github.com/RichardKnop/machinery/v2/tasks"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/log"
+	"github.com/stonemylove/cc-lib/pkg/log"
 	"go.uber.org/zap"
 )
 

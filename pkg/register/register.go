@@ -5,8 +5,8 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/qq6049090/TSDaodao-IMSDK/model"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/wkhttp"
+	"github.com/stonemylove/cc-lib/model"
+	"github.com/stonemylove/cc-lib/pkg/wkhttp"
 )
 
 // APIRouter api路由者

@@ -9,8 +9,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/opentracing/opentracing-go"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/cache"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/log"
+	"github.com/stonemylove/cc-lib/pkg/cache"
+	"github.com/stonemylove/cc-lib/pkg/log"
 	"go.uber.org/zap"
 )
 

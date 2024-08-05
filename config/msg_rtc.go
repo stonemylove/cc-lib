@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 
-	"github.com/qq6049090/TSDaodao-IMSDK/common"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/util"
+	"github.com/stonemylove/cc-lib/common"
+	"github.com/stonemylove/cc-lib/pkg/util"
 )
 
 // rtc 挂断

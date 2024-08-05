@@ -9,7 +9,7 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 	"github.com/opentracing/opentracing-go/log"
-	llog "github.com/qq6049090/TSDaodao-IMSDK/pkg/log"
+	llog "github.com/stonemylove/cc-lib/pkg/log"
 	"github.com/uber/jaeger-client-go"
 	jaegercfg "github.com/uber/jaeger-client-go/config"
 	"go.uber.org/zap"

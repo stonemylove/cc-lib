@@ -1,4 +1,4 @@
-module github.com/qq6049090/TSDaodao-IMSDK
+module github.com/stonemylove/cc-lib
 
 go 1.20
 

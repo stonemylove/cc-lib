@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/gocraft/dbr/v2"
-	"github.com/qq6049090/TSDaodao-IMSDK/config"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/register"
 	migrate "github.com/rubenv/sql-migrate"
+	"github.com/stonemylove/cc-lib/config"
+	"github.com/stonemylove/cc-lib/pkg/register"
 )
 
 func Setup(ctx *config.Context) error {

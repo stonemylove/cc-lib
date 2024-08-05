@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/util"
 	"github.com/spf13/cast"
 	"github.com/spf13/viper"
+	"github.com/stonemylove/cc-lib/pkg/util"
 	"go.uber.org/zap/zapcore"
 )
 

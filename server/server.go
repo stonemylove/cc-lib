@@ -7,11 +7,11 @@ import (
 	"strings"
 
 	"github.com/judwhite/go-svc"
-	"github.com/qq6049090/TSDaodao-IMSDK/config"
-	"github.com/qq6049090/TSDaodao-IMSDK/module"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/log"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/register"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/wkhttp"
+	"github.com/stonemylove/cc-lib/config"
+	"github.com/stonemylove/cc-lib/module"
+	"github.com/stonemylove/cc-lib/pkg/log"
+	"github.com/stonemylove/cc-lib/pkg/register"
+	"github.com/stonemylove/cc-lib/pkg/wkhttp"
 	"github.com/unrolled/secure"
 )
 

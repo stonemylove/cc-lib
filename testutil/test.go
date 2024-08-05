@@ -3,9 +3,9 @@ package testutil
 import (
 	// "github.com/TangSengDaoDao/TangSengDaoDaoServer/modules/base/event"
 
-	"github.com/qq6049090/TSDaodao-IMSDK/config"
-	"github.com/qq6049090/TSDaodao-IMSDK/module"
-	"github.com/qq6049090/TSDaodao-IMSDK/server"
+	"github.com/stonemylove/cc-lib/config"
+	"github.com/stonemylove/cc-lib/module"
+	"github.com/stonemylove/cc-lib/server"
 )
 
 // UID 测试用户ID

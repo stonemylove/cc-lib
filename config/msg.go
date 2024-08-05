@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/qq6049090/TSDaodao-IMSDK/common"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/network"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/util"
 	"github.com/sendgrid/rest"
+	"github.com/stonemylove/cc-lib/common"
+	"github.com/stonemylove/cc-lib/pkg/network"
+	"github.com/stonemylove/cc-lib/pkg/util"
 	"github.com/tidwall/gjson"
 	"go.uber.org/zap"
 )

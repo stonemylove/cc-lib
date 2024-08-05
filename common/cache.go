@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/redis"
+	"github.com/stonemylove/cc-lib/pkg/redis"
 )
 
 // RedisCache redis缓存

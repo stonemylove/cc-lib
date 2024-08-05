@@ -9,14 +9,14 @@ import (
 	"github.com/gocraft/dbr/v2"
 	"github.com/olivere/elastic"
 	"github.com/opentracing/opentracing-go"
-	"github.com/qq6049090/TSDaodao-IMSDK/common"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/cache"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/db"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/log"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/pool"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/redis"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/wkevent"
-	"github.com/qq6049090/TSDaodao-IMSDK/pkg/wkhttp"
+	"github.com/stonemylove/cc-lib/common"
+	"github.com/stonemylove/cc-lib/pkg/cache"
+	"github.com/stonemylove/cc-lib/pkg/db"
+	"github.com/stonemylove/cc-lib/pkg/log"
+	"github.com/stonemylove/cc-lib/pkg/pool"
+	"github.com/stonemylove/cc-lib/pkg/redis"
+	"github.com/stonemylove/cc-lib/pkg/wkevent"
+	"github.com/stonemylove/cc-lib/pkg/wkhttp"
 )
 
 // Context 配置上下文

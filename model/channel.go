@@ -1,6 +1,6 @@
 package model
 
-import "github.com/qq6049090/TSDaodao-IMSDK/config"
+import "github.com/stonemylove/cc-lib/config"
 
 type ChannelResp struct {
 	Channel struct {
