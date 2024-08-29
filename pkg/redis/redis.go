@@ -67,6 +67,7 @@ func (rc *Conn) Llen(key string) (int64, error) {
 	return val, err
 }
 
+// 设置指定范围的list元素
 func (rc *Conn) Lrange(key string, start, stop int64) ([]string, error) {
 	val, err := rc.client.LRange(key, start, stop).Result()
 	if err == rd.Nil {

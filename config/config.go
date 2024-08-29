@@ -165,6 +165,10 @@ type Config struct {
 		NumLen  int  // 数字短编号长度
 		EditOff bool // 是否关闭短编号编辑
 	}
+	// ---------- 其他业务 ----------
+	Business struct {
+		RedPacketExpireTime int // 红包过期时间 单位分钟
+	}
 	// ---------- robot ----------
 	Robot struct {
 		MessageExpire      time.Duration // 消息过期时间
@@ -396,6 +400,12 @@ func New() *Config {
 			NumOn:   false,
 			NumLen:  7,
 			EditOff: false,
+		},
+
+		Business: struct {
+			RedPacketExpireTime int
+		}{
+			RedPacketExpireTime: 60 * 24,
 		},
 
 		// ---------- 机器人 ----------
@@ -641,6 +651,9 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.ShortNo.NumOn = c.getBool("shortNo.numOn", c.ShortNo.NumOn)
 	c.ShortNo.NumLen = c.getInt("shortNo.numLen", c.ShortNo.NumLen)
 	c.ShortNo.EditOff = c.getBool("shortNo.editOff", c.ShortNo.EditOff)
+
+	//#################### 其他业务配置 ####################
+	c.Business.RedPacketExpireTime = c.getInt("business.redPacketExpireTime", c.Business.RedPacketExpireTime)
 
 	//#################### 机器人 ####################
 	c.Robot.MessageExpire = c.getDuration("robot.messageExpire", c.Robot.MessageExpire)

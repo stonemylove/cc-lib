@@ -39,6 +39,26 @@ func (r *RedisCache) Get(key string) (string, error) {
 	return r.conn.GetString(key)
 }
 
+// LPUSH 向List添加元素
+func (r *RedisCache) LPUSH(key string, values ...interface{}) (int64, error) {
+	return r.conn.LPUSH(key, values...)
+}
+
+// LPop  获取List的第一个元素
+func (r *RedisCache) LPop(key string) (string, error) {
+	return r.conn.Lpop(key)
+}
+
+// SMembers 获取Set中的所有元素
+func (r *RedisCache) SMembers(key string) ([]string, error) {
+	return r.conn.SMembers(key)
+}
+
+// SAdd 向Set添加元素
+func (r *RedisCache) SAdd(key string, members ...interface{}) error {
+	return r.conn.SAdd(key, members)
+}
+
 // GetRedisConn 获取redis连接
 func (r *RedisCache) GetRedisConn() *redis.Conn {
 	return r.conn
