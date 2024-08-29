@@ -70,6 +70,22 @@ type MemoryCache struct {
 	sync.RWMutex
 }
 
+func (m *MemoryCache) LPUSH(key string, values ...interface{}) (int64, error) {
+	panic("implement me")
+}
+
+func (m *MemoryCache) LPop(key string) (string, error) {
+	panic("implement me")
+}
+
+func (m *MemoryCache) SAdd(key string, members ...interface{}) error {
+	panic("implement me")
+}
+
+func (m *MemoryCache) SMembers(key string) ([]string, error) {
+	panic("implement me")
+}
+
 // NewMemoryCache 创建
 func NewMemoryCache() *MemoryCache {
 	return &MemoryCache{
