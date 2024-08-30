@@ -91,7 +91,7 @@ func (m *MemoryCache) SMembers(key string) ([]string, error) {
 	panic("implement me")
 }
 
-func (m *MemoryCache) SetExpire(key string) ([]string, error) {
+func (m *MemoryCache) SetExpire(key string, expire time.Duration) ([]string, error) {
 	panic("implement me")
 }
 
