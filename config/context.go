@@ -107,12 +107,12 @@ func (c *Context) NewRedisCache() *common.RedisCache {
 }
 
 // NewMemoryCache 创建一个内存缓存
-func (c *Context) NewMemoryCache() cache.Cache {
-	if c.memoryCache == nil {
-		c.memoryCache = common.NewMemoryCache()
-	}
-	return c.memoryCache
-}
+//func (c *Context) NewMemoryCache() cache.Cache {
+//	if c.memoryCache == nil {
+//		c.memoryCache = common.NewMemoryCache()
+//	}
+//	return c.memoryCache
+//}
 
 // Cache 缓存
 func (c *Context) Cache() cache.Cache {
