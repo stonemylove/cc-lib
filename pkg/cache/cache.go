@@ -10,6 +10,10 @@ type Cache interface {
 	Delete(key string) error
 	// SetAndExpire  设置key value 并支持过期时间
 	SetAndExpire(key string, value string, expire time.Duration) error
+
+	// SetExpire  设置key的过期时间
+	SetExpire(key string, expire time.Duration) error
+
 	// 获取key对应的值
 	Get(key string) (string, error)
 
