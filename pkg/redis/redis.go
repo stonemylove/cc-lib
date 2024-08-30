@@ -339,7 +339,6 @@ func (rc *Conn) Decr(key string) (int64, error) {
 设置某个key的过期时间
 */
 func (rc *Conn) SetExpire(key string, expire time.Duration) error {
-
 	return rc.client.Expire(key, expire).Err()
 }
 

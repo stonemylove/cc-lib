@@ -43,6 +43,9 @@ const (
 	// InviteJoinOrganization 邀请加入组织
 	InviteJoinOrganization ContentType = 16
 
+	// 发送红包的消息
+	SendRedPacket ContentType = 17
+
 	// 消息正文错误
 	ContentError ContentType = 97
 	// signal 解密失败
@@ -80,6 +83,8 @@ const (
 	GroupMemberQuit ContentType = 1021
 	// 群升级
 	GroupUpgrade ContentType = 1022
+	// 抢红包的消息
+	RobRedPacket ContentType = 1023
 
 	// ---------- 客服类 ----------
 	HotlineAssignTo ContentType = 1200 // 分配客服

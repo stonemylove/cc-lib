@@ -34,6 +34,11 @@ func (r *RedisCache) SetAndExpire(key string, value string, expire time.Duration
 	return r.conn.SetAndExpire(key, value, expire)
 }
 
+// SetExpire 设置过期时间
+func (r *RedisCache) SetExpire(key string, expire time.Duration) error {
+	return r.conn.SetExpire(key, expire)
+}
+
 // Get Get
 func (r *RedisCache) Get(key string) (string, error) {
 	return r.conn.GetString(key)
@@ -83,6 +88,10 @@ func (m *MemoryCache) SAdd(key string, members ...interface{}) error {
 }
 
 func (m *MemoryCache) SMembers(key string) ([]string, error) {
+	panic("implement me")
+}
+
+func (m *MemoryCache) SetExpire(key string) ([]string, error) {
 	panic("implement me")
 }
 
