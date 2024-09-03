@@ -248,15 +248,7 @@ func (c *Context) SendGroupMemberRemove(req *MsgGroupMemberRemoveReq) error {
 	for index := range members {
 		params = append(params, fmt.Sprintf("{%d}", index))
 	}
-	//content := fmt.Sprintf("%s将%s移除群聊", req.OperatorName, strings.Join(params, ","))
-	return c.SendCMD(MsgCMDReq{
-		ChannelID:   req.GroupNo,
-		ChannelType: common.ChannelTypeGroup.Uint8(),
-		CMD:         common.CMDFriendDeleted,
-		Param: map[string]interface{}{
-			"channelId": req.GroupNo,
-		},
-	})
+	content := fmt.Sprintf("%s将%s移除群聊", req.OperatorName, strings.Join(params, ","))
 	//return c.SendMessage(&MsgSendReq{
 	//	Header: MsgHeader{
 	//		NoPersist: 0,
@@ -273,6 +265,20 @@ func (c *Context) SendGroupMemberRemove(req *MsgGroupMemberRemoveReq) error {
 	//		"type":    common.GroupMemberRemove,
 	//	})),
 	//})
+	return c.SendMessage(&MsgSendReq{
+		Header: MsgHeader{
+			NoPersist: 0,
+			RedDot:    0,
+			SyncOnce:  0, // 只同步一次
+		},
+		ChannelID:   req.GroupNo,
+		ChannelType: common.ChannelTypeGroup.Uint8(),
+		Payload: []byte(util.ToJson(map[string]interface{}{
+			"channelId": req.GroupNo,
+			"cmd":       common.CMDGroupKick,
+			"type":      common.CMD,
+		})),
+	})
 }
 
 // SendGroupMemberScanJoin 发送群成员扫码加入消息
