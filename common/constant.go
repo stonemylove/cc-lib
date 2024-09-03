@@ -169,6 +169,8 @@ const (
 	CMDSyncPinnedMessage = "syncPinnedMessage"
 	// 消息擦除
 	CMDMessageErase = "messageEerase"
+	// friendDeleted 好友被删除
+	CMDGroupKick = "wk_group_kick"
 )
 
 // UserDeviceTokenPrefix 用户设备token缓存前缀
