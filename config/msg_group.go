@@ -248,7 +248,7 @@ func (c *Context) SendGroupMemberRemove(req *MsgGroupMemberRemoveReq) error {
 	for index := range members {
 		params = append(params, fmt.Sprintf("{%d}", index))
 	}
-	content := fmt.Sprintf("%s将%s移除群聊", req.OperatorName, strings.Join(params, ","))
+	//content := fmt.Sprintf("%s将%s移除群聊", req.OperatorName, strings.Join(params, ","))
 	//return c.SendMessage(&MsgSendReq{
 	//	Header: MsgHeader{
 	//		NoPersist: 0,
