@@ -210,6 +210,9 @@ const (
 	// DeviceTypeHMS 华为设备
 	DeviceTypeHMS DeviceType = "HMS"
 
+	// DeviceTypeHMS 荣耀设备
+	DeviceTypeHONOR DeviceType = "HONOR"
+
 	// DeviceTypeFirebase 海外GOOGLE Firebase推送
 	DeviceTypeFirebase DeviceType = "FIREBASE"
 	// DeviceTypeOPPO oppo设备
