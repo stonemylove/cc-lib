@@ -229,6 +229,7 @@ type Config struct {
 		APNS            APNSPush     // 苹果推送
 		MI              MIPush       // 小米推送
 		HMS             HMSPush      // 华为推送
+		HONOR           HONORPush    // 荣耀推送
 		VIVO            VIVOPush     // vivo推送
 		OPPO            OPPOPush     // oppo推送
 		FIREBASE        FIREBASEPush // FIREBASE推送
@@ -465,6 +466,7 @@ func New() *Config {
 			APNS            APNSPush
 			MI              MIPush
 			HMS             HMSPush
+			HONOR           HONORPush
 			VIVO            VIVOPush
 			OPPO            OPPOPush
 			FIREBASE        FIREBASEPush
@@ -707,6 +709,10 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.Push.HMS.PackageName = c.getString("push.hms.packageName", c.Push.HMS.PackageName)
 	c.Push.HMS.AppID = c.getString("push.hms.appID", c.Push.HMS.AppID)
 	c.Push.HMS.AppSecret = c.getString("push.hms.appSecret", c.Push.HMS.AppSecret)
+	// 荣耀推送
+	c.Push.HONOR.PackageName = c.getString("push.honor.packageName", c.Push.HONOR.PackageName)
+	c.Push.HONOR.AppID = c.getString("push.honor.appID", c.Push.HONOR.AppID)
+	c.Push.HONOR.AppSecret = c.getString("push.honor.appSecret", c.Push.HONOR.AppSecret)
 	// 小米推送
 	c.Push.MI.PackageName = c.getString("push.mi.packageName", c.Push.MI.PackageName)
 	c.Push.MI.AppID = c.getString("push.mi.appID", c.Push.MI.AppID)
@@ -1033,6 +1039,13 @@ type APNSPush struct {
 
 // 华为推送
 type HMSPush struct {
+	PackageName string
+	AppID       string
+	AppSecret   string
+}
+
+// 荣耀推送
+type HONORPush struct {
 	PackageName string
 	AppID       string
 	AppSecret   string
