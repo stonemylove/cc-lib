@@ -713,6 +713,8 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.Push.HONOR.PackageName = c.getString("push.honor.packageName", c.Push.HONOR.PackageName)
 	c.Push.HONOR.AppID = c.getString("push.honor.appID", c.Push.HONOR.AppID)
 	c.Push.HONOR.AppSecret = c.getString("push.honor.appSecret", c.Push.HONOR.AppSecret)
+	c.Push.HONOR.ClientId = c.getString("push.honor.clientId", c.Push.HONOR.ClientId)
+	c.Push.HONOR.ClientSecret = c.getString("push.honor.clientSecret", c.Push.HONOR.ClientSecret)
 	// 小米推送
 	c.Push.MI.PackageName = c.getString("push.mi.packageName", c.Push.MI.PackageName)
 	c.Push.MI.AppID = c.getString("push.mi.appID", c.Push.MI.AppID)
@@ -1046,9 +1048,11 @@ type HMSPush struct {
 
 // 荣耀推送
 type HONORPush struct {
-	PackageName string
-	AppID       string
-	AppSecret   string
+	PackageName  string
+	AppID        string
+	AppSecret    string
+	ClientId     string
+	ClientSecret string
 }
 
 // 小米推送
