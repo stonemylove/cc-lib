@@ -157,7 +157,7 @@ func (c *Context) CheckLoginRoleIsSuperAdmin() error {
 	if role == "" {
 		return errors.New("登录用户角色错误")
 	}
-	if role != string(SuperAdmin) {
+	if role != string(Admin) && role != string(SuperAdmin) {
 		return errors.New("该用户无权执行此操作")
 	}
 	return nil
