@@ -720,6 +720,7 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.Push.MI.AppID = c.getString("push.mi.appID", c.Push.MI.AppID)
 	c.Push.MI.AppSecret = c.getString("push.mi.appSecret", c.Push.MI.AppSecret)
 	c.Push.MI.ChannelID = c.getString("push.mi.channelID", c.Push.MI.ChannelID)
+	c.Push.MI.RtcChannelID = c.getString("push.mi.rtcChannelID", c.Push.MI.RtcChannelID)
 	// vivo推送
 	c.Push.VIVO.PackageName = c.getString("push.vivo.packageName", c.Push.VIVO.PackageName)
 	c.Push.VIVO.AppID = c.getString("push.vivo.appID", c.Push.VIVO.AppID)
@@ -1057,10 +1058,11 @@ type HONORPush struct {
 
 // 小米推送
 type MIPush struct {
-	PackageName string
-	AppID       string
-	AppSecret   string
-	ChannelID   string
+	PackageName  string
+	AppID        string
+	AppSecret    string
+	ChannelID    string
+	RtcChannelID string
 }
 
 // oppo推送
